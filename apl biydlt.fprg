@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="APL self-check1"/>
+        <attribute name="authors" value="asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-27 09:40:53 AM"/>
+        <attribute name="created" value="YXN1cztMQVBUT1AtS0FRTERGVVU7MjAyNi0xMC0yNzswODozODo1MSBBTTsyODMy"/>
+        <attribute name="edited" value="YXN1cztMQVBUT1AtS0FRTERGVVU7MjAyNi0xMC0yNzswOTo0MDo1MyBBTTsxOzI5MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="celcius, fahrenheit, mintemp" type="Real" array="False" size=""/>
+            <declare name="mintempday, i" type="Integer" array="False" size=""/>
+            <assign variable="mintemp" expression="999"/>
+            <for variable="i" start="1" end="7" direction="inc" step="1">
+                <input variable="celcius"/>
+                <assign variable="fahrenheit" expression="celcius*9/5+32"/>
+                <output expression="fahrenheit" newline="True"/>
+                <if expression="celcius&lt;-25">
+                    <then>
+                        <output expression="&quot;&#1053;&#1080;&#1083;&#1101;&#1101;&#1085; &#1093;&#1199;&#1081;&#1090;&#1101;&#1088;&#1089;&#1101;&#1085; &#1090;&#1091;&#1083; &#1076;&#1086;&#1090;&#1091;&#1091;&#1088; &#1257;&#1084;&#1076;,&#1079;&#1091;&#1079;&#1072;&#1072;&#1085; &#1094;&#1072;&#1084;&#1094;,&#1084;&#1072;&#1083;&#1075;&#1072;&#1081;,&#1073;&#1101;&#1101;&#1083;&#1080;&#1081; &#1090;&#1073;&#1072;&#1081;&#1085;&#1075;&#1072; &#1257;&#1084;&#1089;&#1257;&#1078; &#1075;&#1072;&#1088;&#1072;&#1093; &#1093;&#1101;&#1088;&#1101;&#1075;&#1090;&#1101;&#1081;&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="celcius&lt;-10">
+                            <then>
+                                <output expression="&quot;&#1045;&#1088; &#1085;&#1100; &#1093;&#1199;&#1081;&#1090;&#1101;&#1085; &#1073;&#1072;&#1081;&#1075;&#1072;&#1072; &#1096;&#1199;&#1199; &#1079;&#1091;&#1079;&#1072;&#1072;&#1085; &#1257;&#1084;&#1076; &#1094;&#1072;&#1084;&#1094;&#1072;&#1072; &#1073;&#1072;&#1081;&#1085;&#1075;&#1072; &#1257;&#1084;&#1089;&#1257;&#1078; &#1073;&#1072;&#1081;&#1075;&#1072;&#1072;&#1088;&#1072;&#1081;&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="celcius&lt;0">
+                                    <then>
+                                        <output expression="&quot;&#1061;&#1199;&#1081;&#1090;&#1101;&#1085;&#1076;&#1199;&#1199; &#1073;&#1072;&#1081;&#1085;&#1072; &#1085;&#1080;&#1084;&#1075;&#1101;&#1085; &#1093;&#1091;&#1074;&#1094;&#1072;&#1089; &#1072;&#1083;&#1100; &#1073;&#1086;&#1083;&#1086;&#1093; &#1257;&#1084;&#1089;&#1257;&#1093;&#1075;&#1199;&#1081; &#1093;&#1072;&#1085;&#1094;&#1091;&#1081;&#1090;&#1072;&#1081; &#1094;&#1072;&#1084;&#1094; &#1257;&#1084;&#1076;&#1257;&#1257; &#1257;&#1084;&#1089;&#1257;&#1093;&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="celcius&lt;10">
+                                            <then>
+                                                <output expression="&quot;&#1044;&#1072;&#1078;&#1075;&#1199;&#1081; &#1076;&#1091;&#1083;&#1072;&#1072;&#1093;&#1072;&#1085; &#1073;&#1072;&#1081;&#1085;&#1072; &#1102;&#1084;&#1099;&#1075; &#1103;&#1072;&#1078; &#1084;&#1072;&#1075;&#1072;&#1076; &#1093;&#1257;&#1085;&#1075;&#1257;&#1085; &#1075;&#1072;&#1076;&#1091;&#1091;&#1088; &#1093;&#1091;&#1074;&#1094;&#1072;&#1089; &#1072;&#1074;&#1072;&#1072;&#1088;&#1072;&#1081;&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="celcius&lt;20">
+                                                    <then>
+                                                        <output expression="&quot;&#1044;&#1091;&#1083;&#1072;&#1072;&#1093;&#1072;&#1085; &#1073;&#1072;&#1081;&#1085;&#1257;&#1257; , &#1257;&#1257;&#1088;&#1090;&#1257;&#1257; &#1090;&#1086;&#1093;&#1080;&#1088;&#1091;&#1091;&#1083;&#1072;&#1072;&#1076; &#1093;&#1091;&#1074;&#1094;&#1072;&#1089;&#1072;&#1072; &#1257;&#1084;&#1089;&#1257;&#1257;&#1088;&#1101;&#1081;&quot;" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="celcius&lt;mintemp">
+                    <then>
+                        <assign variable="mintemp" expression="celcius"/>
+                        <assign variable="mintempday" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Mintempday:&quot; &amp;mintempday" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
